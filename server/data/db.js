@@ -10,7 +10,7 @@ const connect = async (nameCollecion) => {
         `mongodb+srv://MyMongoDBUser:mongodb12345@gabriel-cw2.dyfen.mongodb.net/webstore?retryWrites=true&w=majority`,
         { useUnifiedTopology: true }
     );
-//bug
+/////dont use 3.6.4 - bugged
     return client.db(database).collection(nameCollecion);
 }
 
