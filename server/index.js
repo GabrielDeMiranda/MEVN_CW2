@@ -17,8 +17,6 @@ app.use(morgan('tiny'));
 const lessonsRouter = require('./routes/api/lessons')(express, db);
 const ordersRouter = require('./routes/api/orders')(express, db);
 
-app.use('/api/lessons', lessonsRouter);
-app.use('/api/orders', ordersRouter);
 
 if (process.env.NODE_ENV !== 'development') {
     app.use(express.static(__dirname + '/public/'));
@@ -28,4 +26,6 @@ if (process.env.NODE_ENV !== 'development') {
 
 const port = process.env.PORT || 3000;
 
-app.listen(port, () => console.log('Listening on port ${port}...'));
+app.listen(port, () => console.log('Listening on port: ${port}...'));
+
+//git is bugging
